@@ -1,16 +1,12 @@
 
 ## Basic Idea
  ### About database
- Added few more columns to handle Instagram posts image urls and other post metadata. Created a table called `mutual_follows` to find the intersection between followers. Added a trigger `update_mutual_follows_trigger` to update the mutuals mapping on an upsert in the following/follower list. The above table is replica of `follow_link` table provided in your resources.
+ handle Instagram posts image urls and other post metadata. Created a table called `mutual_follows` to find the intersection between followers. Added a trigger `update_mutual_follows_trigger` to update the mutuals mapping on an upsert in the following/follower list. 
 
  ### About Scraper
- Since you already had implemented user metadata scraping, I wanted to dive deeper to get user posts and metadata for better interests extraction since there may be cases where posts are more descriptive about a user's interest(like art and traveling).
+implemented user metadata scraping, got user posts and metadata for better interests extraction since there may be cases where posts are more descriptive about a user's interest(like art and traveling).
 
-### About Prompting
-Since this was a take home task it is a pretty standard prompt template. Though, it follows the format mentioned by the OpenAI president, check it out [here](https://x.com/gdb/status/1878489681702310392).
 
- ### For Voice Bot 
- I would apologize for my unawareness regarding TTS Voice Models so here is a cool demo for an semi-open-source voice bot called [Ultravox](https://demo.ultravox.ai/). It's a well-known model so you might be aware about it too.
 
 ## Setup
 
@@ -26,8 +22,10 @@ Since this was a take home task it is a pretty standard prompt template. Though,
 1. Clone this repository:
 
 ```bash
-git clone https://github.com/Scav6411/instagram-interests.git
-cd instagram-interests
+git clone https://github.com/tawishicodes/six_scrapping-
+cd six_scrapping-
+
+
 ```
 
 2. Install required packages:
@@ -113,7 +111,7 @@ python batch_interest.py <username>
 
 - You'll be prompted to enter a batch size (default: 20)
 
-### 7. Mutual Followers Analysis
+### 6. Mutual Followers Analysis
 
 Finds mutual followers between two Instagram users.
 
@@ -128,6 +126,5 @@ python get_mutual_followers.py <username1> <username2>
 3. Analyze images and captions using AI to determine interests
 4. Process following list data to refine interest predictions
 5. Output predicted interests
-
 
 
